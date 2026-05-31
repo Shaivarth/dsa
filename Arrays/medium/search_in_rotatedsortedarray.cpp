@@ -8,28 +8,21 @@ int search(vector<int>& nums, int target) {
 
     while (left <= right) { // kind of two pointer approach
         int mid = left + (right - left) / 2;
-
         if (nums[mid] == target) // found 
             return mid;
-        // if left half is sorted
-        if (nums[left] <= nums[mid]){ 
-            // target in left half
-            if (target >= nums[left] && target < nums[mid]) {
+        if (nums[left] <= nums[mid]){ // left half is sorted
+            if (target >= nums[left] && target < nums[mid]) { // target in left half
                 right = mid - 1;
             }
-            // target in right half
-            else {
+            else { // target in right half
                 left = mid + 1;
             }
         }
-        // if right half is sorted
-        else {
-            // target in right half
-            if (target > nums[mid] && target <= nums[right]) {
+        else { // right half is sorted
+            if (target > nums[mid] && target <= nums[right]) { // target in right half
                 left = mid + 1;
             }
-            // target in left half
-            else {
+            else { // target in left half
                 right = mid - 1;
             }
         }
