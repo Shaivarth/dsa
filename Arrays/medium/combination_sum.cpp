@@ -29,8 +29,7 @@ int main() {
     Solution s;
     vector<int> candidates = {2, 3, 6, 7};
     int target = 7;
-    vector<vector<int>> result =
-        s.combinationSum(candidates, target);
+    vector<vector<int>> result = s.combinationSum(candidates, target);
     for (auto &comb : result) {
         cout << "[ ";
         for (int x : comb) {
