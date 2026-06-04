@@ -26,7 +26,9 @@ class Solution:
         return res
 nums = [-1, 0, 1, 2, -1, -4]
 numss = [-2, 0, 1, 1, 2]
+numsss = [1, 2, 3, 4]
 
 sol = Solution()
 print(sol.threeSum(nums))
 print(sol.threeSum(numss))
+print(sol.threeSum(numsss))
