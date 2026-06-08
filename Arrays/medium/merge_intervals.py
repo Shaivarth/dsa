@@ -1,5 +1,5 @@
 def merge(intervals):
-    intervals.sort()
+    intervals.sort() # ".sort()" sorting is based on lexicographical order..
 
     merged = [intervals[0]]
     for start, end in intervals[1:]:
